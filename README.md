@@ -2,7 +2,7 @@
 
 Final project - Automated rental agreements
 
-    Deployed version url:
+    Deployed version url: https://round-breeze-3568.on.fleek.co/
 
 
 How to run this project locally:
@@ -83,7 +83,8 @@ Simple workflow
 
 Other items (Not implemented)
 
-    List if items still remaining
+    Matching the token Id to the VIN number
+   
 
 
 Directory structure

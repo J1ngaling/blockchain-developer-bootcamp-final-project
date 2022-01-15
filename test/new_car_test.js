@@ -6,11 +6,14 @@ const newCar = artifacts.require("newCar");
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
 contract("newCar", function ( accounts ) {
+
+  // this test checks that the contract is deployed
   it("should assert true", async function () {
     await newCar.deployed();
     return assert.isTrue(true);
   });
 
+  // this test ensures that the token counter starts off with a zero
   it("has an initial value of 0", async () => {
     const newCarInstance = await newCar.deployed();
 
@@ -19,6 +22,7 @@ contract("newCar", function ( accounts ) {
     assert.equal(tokenCounter, 0, 'Token counter should be zero');
   })
 
+  // ensures that the initial mint price, deployed with the constructor is 0.02 ether
   it("has an initial mint price of 0.02 ether", async () => {
     const newCarInstance = await newCar.deployed();
 
@@ -27,6 +31,7 @@ contract("newCar", function ( accounts ) {
     assert.equal(newCarPrice, 20000000000000000, 'newCarPrice should be 0.02 ether');
   })
 
+  // this test checks that a token is created when the mintCar function is called
   it("creates a new token when mintCar function is called", async () => {
     const newCarInstance = await newCar.deployed();
 
@@ -37,6 +42,7 @@ contract("newCar", function ( accounts ) {
     assert.equal(newToken, 1, 'There should be 1 token');
   })
 
+  // this test checks that the token that is transferred to the caller's address
   it("mints the token to the user's address", async () => {
     const newCarInstance = await newCar.deployed();
 
