@@ -117,6 +117,28 @@
         border-radius: 4px;
     }
 
+    #mint-confirm {
+        position: absolute;
+        width: 286px;
+        height: 22px;
+        left: 556px;
+        top: 228px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        color: #949494;
+    }
+
     #balance-button {
         display: flex;
         flex-direction: row;
@@ -128,7 +150,7 @@
         width: 135px;
         height: 36px;
         left: 653px;
-        top: 228px;
+        top: 270px;
 
         color: #313131;
         background: #FFFFFF;
@@ -140,7 +162,7 @@
         width: 286px;
         height: 22px;
         left: 610px;
-        top: 270px;
+        top: 308px;
 
         font-family: Inter;
         font-style: normal;
@@ -167,7 +189,7 @@
         width: 542px;
         height: 69px;
         left: 449px;
-        top: 308px;
+        top: 348px;
 
         /* Light / White */
 
@@ -217,31 +239,35 @@
    <div id="mm-current-account"></div>
    
    <div id="input">
-   <button id="input-button">Purchase Auto</button>
+   <button id="input-button">Purchase Vehicle</button>
    </div>
 
    <!-- 4. Read state from contract -->
 
+   <p id="mint-confirm"></p>
+
    
-   <button id="balance-button">AutoBalance</button>
+   <button id="balance-button">Vehicle Balance</button>
    <div id="balance-return"></div>
     
 
    <div id="auto-details">
-   <p>The token ID for your xth vehicle is:</p> 
+   <p>The Token ID for vehicle #:</p> 
 
-   <input id="autos-owned" type="number" placeholder="Xth vehicle"/>
+   <input id="autos-owned" type="number" placeholder="X"/>
+
+
 
    <div id="auto-id"></div>
-   <button id="id-button">AutoID</button>
+   <button id="id-button">Get ID</button>
    <div id="id-return"></div>
     
 
 
     <div id="auto-transfer">
-   <div>Input token ID and Transferee Address</div> 
+   <div>Input Token ID and Transferee Address:</div> 
    
-   <input id="input-ID" type="text" placeholder="Enter AutoMobile ID"/>
+   <input id="input-ID" type="text" placeholder="Enter Token ID"/>
    <input id="input-address" type="text" placeholder="Enter Address"/>
    <button id="transfer-button">Transfer</button>
    <div id="transfer-return"></div>

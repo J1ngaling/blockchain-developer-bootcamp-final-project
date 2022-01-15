@@ -1,5 +1,3 @@
-console.log("Hello you Choester")
-
 window.addEventListener("load", function() {
     if (typeof window.ethereum !== 'undefined'){
         console.log("MetaMask detected")
@@ -561,8 +559,6 @@ const ABI = [
 const contractSubmit = document.getElementById("input-button");
 contractSubmit.onclick = async () => {
     const submitAddress = ethereum.selectedAddress;
-    // const submitAddress = document.getElementById("input-box").value;
-    console.log(submitAddress);
 
     var web3 = new Web3(window.ethereum);
     
@@ -570,10 +566,9 @@ contractSubmit.onclick = async () => {
 
     autoMint.setProvider(window.ethereum);
 
-	// const autoPrice = 20000000  ;
-
     await autoMint.methods.mintCar(submitAddress).send({ from: ethereum.selectedAddress, value: web3.utils.toWei('0.02', "ether")})
 }
+
 
 const balanceReturn = document.getElementById("balance-button");
 balanceReturn.onclick = async () => {
@@ -605,7 +600,7 @@ idReturn.onclick = async () => {
 
     const userId = await autoMint.methods.tokenOfOwnerByIndex(ethereum.selectedAddress, autosOwned - 1).call({ from: ethereum.selectedAddress});
  
-    document.getElementById("id-return").innerHTML = "Your AutoMobile ID is #" + userId;
+    document.getElementById("id-return").innerHTML = "Token ID #" + userId;
 }
 
 
@@ -625,3 +620,21 @@ idTransfer.onclick = async () => {
     await autoMint.methods.transferCar(transferAddress, transferID).send({ from: ethereum.selectedAddress})
 }
 
+
+
+// var web3 = new Web3(window.ethereum);
+
+// const autoMint = new web3.eth.Contract (ABI, contractAddress)
+
+// autoMint.events.newMint((function(err, event) {
+// 	if (err) {
+// 		console.log(err);
+// 	}
+
+// 	if (result) {
+// 		console.log(result);
+// 		document.getElementById("mint-confirm").innerHTML = "You minted token " + res.args.newMint.c[0];
+// 	}
+// }));
+
+// document.getElementById("mint-confirm").innerHTML = "You minted token " + newEvent
