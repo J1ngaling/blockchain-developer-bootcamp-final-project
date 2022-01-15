@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style> 
+    h1 {
+        background-color: FCFC;
+        position: absolute;
+        width: 188px;
+        height: 45px;
+        left: 630px;
+        top: 50px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 140%;
+        /* identical to box height, or 45px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        color: 000000;
+    }
+    #mm-detected {
+        position: absolute;
+        width: 254px;
+        height: 28px;
+        right: 0px;
+        top: 24px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        /* identical to box height, or 28px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        color: #313131;
+    }
+
+    #mm-connect {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+
+        position: absolute;
+        width: 164px;
+        height: 36px;
+        left: 1212px;
+        top: 54px;
+
+        background: #FFFFFF;
+        border: 1px solid #313131;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    #mm-current-account {
+        position: absolute;
+        width: 286px;
+        height: 22px;
+        left: 556px;
+        top: 151px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        color: #949494;
+    }
+
+    #input {
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+
+    #input-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+
+        position: absolute;
+        width: 135px;
+        height: 36px;
+        left: 653px;
+        top: 188px;
+
+        color: #FFFFFF;
+        background: #313131;
+        border-radius: 4px;
+    }
+
+    #balance-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+
+        position: absolute;
+        width: 135px;
+        height: 36px;
+        left: 653px;
+        top: 228px;
+
+        color: #313131;
+        background: #FFFFFF;
+        border-radius: 4px;
+    }
+
+    #balance-return {
+        position: absolute;
+        width: 286px;
+        height: 22px;
+        left: 610px;
+        top: 270px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        color: #313131;
+    }
+
+    #auto-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 16px;
+
+        position: absolute;
+        width: 542px;
+        height: 69px;
+        left: 449px;
+        top: 308px;
+
+        /* Light / White */
+
+        background: #FFFFFF;
+        /* Card shadow */
+
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    #auto-transfer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 16px;
+
+        position: absolute;
+        width: 542px;
+        height: 89px;
+        right: 0px;
+        top: 138px;
+
+        /* Light / White */
+
+        background: #FFFFFF;
+        /* Card shadow */
+
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+    
+    </style>
+    
+    <title>New Car Dapp</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+    <h1>We Sell Cars</h1>
+  
+    <!-- 1. Detect if MetaMask is installed -->
+    <div id="mm-detected"></div>
+
+    <!-- 2. Allow acces to MM -->
+   <button id="mm-connect">Connect to MetaMask</button>
+   
+   <!-- 3. Allow transaction -->
+   <div id="mm-current-account"></div>
+   
+   <div id="input">
+   <button id="input-button">Purchase Auto</button>
+   </div>
+
+   <!-- 4. Read state from contract -->
+
+   
+   <button id="balance-button">AutoBalance</button>
+   <div id="balance-return"></div>
+    
+
+   <div id="auto-details">
+   <p>The token for you xth vehicle is:</p> 
+
+   <input id="autos-owned" type="number" placeholder="Sequential number of vehicle owned"/>
+
+   <div id="auto-id"></div>
+   <button id="id-button">AutoID</button>
+   <div id="id-return"></div>
+    
+
+
+    <div id="auto-transfer">
+   <div>Input token ID and Transferee Address</div> 
+   
+   <input id="input-ID" type="text" placeholder="Enter AutoMobile ID"/>
+   <input id="input-address" type="text" placeholder="Enter Address"/>
+   <button id="transfer-button">Transfer</button>
+   <div id="transfer-return"></div>
+    </div>
+
+
+   <script src="dapp.js"></script>
+
+</body>
+</html>
