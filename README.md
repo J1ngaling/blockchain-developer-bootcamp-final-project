@@ -12,13 +12,13 @@
 
 
 ### Advantages to current TradFi:
-    * Real-time review and access of ownership history and credentials
-    * Transparency of terms and details of the transactions
-    * Increased efficiency instead of using vehicle titles
-    * Removal of central governmental authorities that cause delays and additional costs
+    - Real-time review and access of ownership history and credentials
+    - Transparency of terms and details of the transactions
+    - Increased efficiency instead of using vehicle titles
+    - Removal of central governmental authorities that cause delays and additional costs
 
 
-# Final Project: Automated rental agreements
+# Final Project: Vehicle Purchases
 
 ## Deployed version url: 
     https://round-breeze-3568.on.fleek.co/
@@ -27,38 +27,38 @@
 ## How to run this project locally:
 
 ### Prerequisites
-    * Node >=v14
-        * download Node: https://nodejs.org/en/download/
+    - Node >=v14
+        - download Node: https://nodejs.org/en/download/
 
 
-    * Truffle v5.4.17
+    - Truffle v5.4.17
 
-        * Truffle: 'npm install -g truffle'
-        * HDWallet provider: 'npm install @truffle/hdwallet-provider'
-        * Ganache-cli: 'npm install ganache-cli'
+        - Truffle: 'npm install -g truffle'
+        - HDWallet provider: 'npm install @truffle/hdwallet-provider'
+        - Ganache-cli: 'npm install ganache-cli'
 
-    * Open-zeppelin contracts and libraries: 'npm install @openzeppelin/contracts'
+    - Open-zeppelin contracts and libraries: 'npm install @openzeppelin/contracts'
 
-    * Utils .env file: 'npm install dotenv'
+    - Utils .env file: 'npm install dotenv'
 
 ### Setting up the repo
-    * Clone the repo by running 'git clone https://github.com/J1ngaling/blockchain-developer-bootcamp-final-project'
-    * Run npm install in project root to install Truffle build and smart contract dependencies
+    - Clone the repo by running 'git clone https://github.com/J1ngaling/blockchain-developer-bootcamp-final-project'
+    - Run npm install in project root to install Truffle build and smart contract dependencies
 
 ## Setting up the local network:
-    * Run local testnet in port 7545 with an Ethereum client such as  Ganache
-    * Enter the following to migrate the contract - 'truffle migrate --network development'
-    * Open the truffle console using - 'truffle console --network development'
-    * Run tests in Truffle console by entereing - 'test'
+    - Run local testnet in port 7545 with an Ethereum client such as  Ganache
+    - Enter the following to migrate the contract - 'truffle migrate --network development'
+    - Open the truffle console using - 'truffle console --network development'
+    - Run tests in Truffle console by entereing - 'test'
 
 ## Front-end:
-    * Open the file _dapp.js_ and navigate to line 28. Replace the contractAddress with the localhost address that was created 
-    * If you have _Live Server_ plugin installed in VS Code then right click on _index.html_ and select "Open with Live Server" OR
-    * Run 'npm install -g http-server' to install http-server globally
-    * Run 'http-server' - this will display the IP-address where the Local Node Js web server is running and accessible
-    * Go to the browser and point to the IP address given by the http-server command over Terminal or Command prompt
-    * Connect your MetaMask waller and start interacting with the site
-    * This DApp will require you to have Rinkeby test-ether which can be obtained here - https://faucet.rinkeby.io/
+    - Open the file _dapp.js_ and navigate to line 28. Replace the contractAddress with the localhost address that was created 
+    - If you have _Live Server_ plugin installed in VS Code then right click on _index.html_ and select "Open with Live Server" OR
+    - Run 'npm install -g http-server' to install http-server globally
+    - Run 'http-server' - this will display the IP-address where the Local Node Js web server is running and accessible
+    - Go to the browser and point to the IP address given by the http-server command over Terminal or Command prompt
+    - Connect your MetaMask waller and start interacting with the site
+    - This DApp will require you to have Rinkeby test-ether which can be obtained here - https://faucet.rinkeby.io/
 
 
 ## Screencast link:
@@ -66,7 +66,7 @@
 
 
 ## Public Ethereum wallet for certification:
-    'jingaling.eth'
+    jingaling.eth
 
 
 ## Simple workflow:
@@ -86,12 +86,12 @@
    
 
 ## Directory structure:
-    * 'build/contracts': ABI files
-    * 'contracts': Smart contracts that are deployed on the Rinkeby testnet.
-    * 'migrations': Migration files for deploying contracts in contracts directory.
-    * 'test': Tests for smart contracts.
-    * 'index.html': The front end containing the CSS and html
-    * 'dapp.js': The backend javascript file for the front end
+    - build/contracts: ABI files
+    - contracts: Smart contracts that are deployed on the Rinkeby testnet.
+    - migrations: Migration files for deploying contracts in contracts directory.
+    - test: Tests for smart contracts.
+    - index.html: The front end containing the CSS and html
+    - dapp.js: The backend javascript file for the front end
 
 
 ## Environment variables (not needed for running project locally):
@@ -102,7 +102,7 @@
 
 
 ## To do features:
-    * Ability to list all tokens owned
-    * Include metadata of the vehicle (model, colour, etc)
-    * Matching the Token ID to the VIN number
+    - Ability to list all tokens owned
+    - Include metadata of the vehicle (model, colour, etc)
+    - Matching the Token ID to the VIN number
    
