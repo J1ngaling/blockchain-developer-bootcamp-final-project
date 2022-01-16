@@ -61,6 +61,35 @@
     - This DApp will require you to have Rinkeby test-ether which can be obtained here - https://faucet.rinkeby.io/
 
 
+## Deploying your own ProducerFactory to a testnet (Rinkeby)
+
+The following is not neccesary to run locally.
+
+###Setting up Infura Project
+
+    - Go to https://infura.io/
+    - Create an Infura account or sign in to an existing account and select Create a New Project.
+        
+### .env file
+
+    - Create a file called .env in /truffle
+    - Write your Infura credentials to file. Your .env should look like this:
+        MNEMONIC="{Your MNEMONICs}"
+        INFURA_URL={Your Infura endpoint URL} !! IMPORTANT: Make sure you add the .env file to .gitignore. 
+    - Add this at the top of your truffle_config.js file:
+        const HDWalletProvider = require('@truffle/hdwallet-provider');
+        const dotenv = require('dotenv');
+        dotenv.config();
+        const mnemonic = process.env.MNEMONIC;
+    - Add this under module.exports and under networks to target the Rinkeby network:
+        rinkeby: {
+        provider: () => new HDWalletProvider(mnemonic, process.env.INFURA_URL),
+        network_id: "4",
+        gas: 5500000
+        }
+    - Then run truffle migrate --network rinkeby
+
+
 ## Screencast link:
     https://www.loom.com/share/c47ffe63c1624af186092c2bf2394203
 
