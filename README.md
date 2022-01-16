@@ -65,7 +65,7 @@
 
 The following is not neccesary to run locally.
 
-###Setting up Infura Project
+### Setting up Infura Project
 
     - Go to https://infura.io/
     - Create an Infura account or sign in to an existing account and select Create a New Project.
